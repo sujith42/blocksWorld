@@ -7,6 +7,7 @@ This module offers a collection of methods for generating polygons.
 """
 
 import math
+import sys
 import numpy as np
 import random
 
@@ -37,6 +38,7 @@ def regularPolygon(nrNodes, center, size):
         yi = radius * math.sin(angle) + y
         output.append(np.array([xi, yi]))
 
+    print output
     return output
 
 def convexPolygon(nrNodes, center, size):
@@ -62,6 +64,7 @@ def concavePolygon(nrNodes, center, size):
 
     return output
 
+
 def randomPolygon(seed, nrNodes, center, size):
     """
     Return a list of 2D points representing the vertices of a random polygon.
@@ -82,4 +85,5 @@ def randomPolygon(seed, nrNodes, center, size):
         yi = random.uniform(-1.0, 1.0) * radius + y
         output.append(np.array([xi, yi]))
 
+    print output
     return output
